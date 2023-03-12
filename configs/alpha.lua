@@ -18,7 +18,7 @@ require("alpha").setup(astronvim.user_plugin_opts("plugins.alpha", {
       }, false),
       opts = { position = "center", hl = "DashboardHeader" },
     },
-    { type = "padding", val = (vim.g.neovide and {7} or {1})[1] },
+    { type = "padding", val = (vim.g.neovide and { 7 } or { 1 })[1] },
     {
       type = "group",
       val = {
@@ -28,6 +28,7 @@ require("alpha").setup(astronvim.user_plugin_opts("plugins.alpha", {
         astronvim.alpha_button("LDR f f", "  Find File  "),
         astronvim.alpha_button("LDR f w", "  Find Word  "),
         astronvim.alpha_button("LDR f m", "  Bookmarks  "),
+        astronvim.alpha_button("LDR p C", "  Configure  "),
       },
       opts = { spacing = 0 },
     },
