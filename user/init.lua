@@ -4,6 +4,8 @@
 -- You can think of a Lua "table" as a dictionary like data structure the
 -- normal format is "key = value". These also handle array like data structures
 -- where a value with no key simply has an implicit numeric key
+math.randomseed(os.time())
+require("user.art")
 local config = {
         -- Configure AstroNvim updates
         updater = {
@@ -44,6 +46,7 @@ local config = {
                         signcolumn = "auto",   -- sets vim.opt.signcolumn to auto
                         wrap = false,          -- sets vim.opt.wrap
                         autochdir = true,
+                        guifont = "Fira Code:h12",
                 },
                 g = {
                         mapleader = " ",                   -- sets vim.g.mapleader
@@ -71,30 +74,7 @@ local config = {
         -- end,
 
         -- Set dashboard header
-        header = {
-                "      ` : | | | |:  ||  :     `  :  |  |+|: | : : :|   .        `              .",
-                "      ` : | :|  ||  |:  :    `  |  | :| : | : |:   |  .                    :",
-                "         .' ':  ||  |:  |  '       ` || | : | |: : |   .  `           .   :.",
-                "                `'  ||  |  ' |   *    ` : | | :| |*|  :   :               :|",
-                "        *    *       `  |  : :  |  .      ` ' :| | :| . : :         *   :.||",
-                "             .`            | |  |  : .:|       ` | || | : |: |          | ||",
-                "      '          .         + `  |  :  .: .         '| | : :| :    .   |:| ||",
-                "         .                 .    ` *|  || :       `    | | :| | :      |:| |",
-                " .                .          .        || |.: *          | || : :     :|||",
-                "        .            .   . *    .   .  ` |||.  +        + '| |||  .  ||`",
-                "     .             *              .     +:`|!             . ||||  :.||`",
-                " +                      .                ..!|*          . | :`||+ |||`",
-                "     .                         +      : |||`        .| :| | | |.| ||`     .",
-                "       *     +   '               +  :|| |`     :.+. || || | |:`|| `",
-                "                            .      .||` .    ..|| | |: '` `| | |`  +",
-                "  .       +++                      ||        !|!: `       :| |",
-                "              +         .      .    | .      `|||.:      .||    .      .    `",
-                "          '                           `|.   .  `:|||   + ||'     `",
-                "  __    +      *                         `'       `'|.    `:",
-                "'  `---\"\"\"----....____,..^---`^``----.,.___          `.    `.  .    ____,.,-",
-                "    ___,--'\"\"`---\"'   ^  ^ ^        ^       \"\"\"'---,..___ __,..---\"\"'",
-                "--\"'                                 ^                         ``--..,__",
-        },
+        header = ASCII_ARRAY[math.random(#ASCII_ARRAY)],
         -- Default theme configuration
         default_theme = {
                 -- Modify the color palette for the default theme
