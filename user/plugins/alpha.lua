@@ -16,7 +16,7 @@ return {
       button("LDR f f", "  Find File  "),
       button("LDR f w", "  Find Word  "),
       button("LDR f '", "  Bookmarks  "),
-      button("LDR p C", "  Configure  "),
+      button("LDR f a", "  Configure  "),
     }
     dashboard.section.buttons.opts = {
       spacing = 0,

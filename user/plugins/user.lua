@@ -12,7 +12,7 @@ return {
   --
   { "shaunsingh/nord.nvim", lazy = false },
   -- { "liuchengxu/vista.vim" },
-  { "habamax/vim-godot" },
+  { "habamax/vim-godot",    lazy = false },
   {
     "simrat39/symbols-outline.nvim",
     event = "BufRead",
